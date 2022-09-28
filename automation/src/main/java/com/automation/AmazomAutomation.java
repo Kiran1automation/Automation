@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 @Test
 public class AmazomAutomation {
-	By searchfield = By.xpath("//input[@type='text']");
+	By searchfield1 = By.xpath("//input[@type='text']");
 	By Backpack = By.xpath("//span[text()='Backpacks']");
 	By buyNow = By.xpath("//input[@id='buy-now-button']");
 	
@@ -32,8 +32,8 @@ public class AmazomAutomation {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();
-		driver.findElement(searchfield).sendKeys("school backpack");
-		driver.findElement(searchfield).sendKeys(Keys.ENTER);
+		driver.findElement(searchfield1).sendKeys("school backpack");
+		driver.findElement(searchfield1).sendKeys(Keys.ENTER);
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(backpack));
 		
