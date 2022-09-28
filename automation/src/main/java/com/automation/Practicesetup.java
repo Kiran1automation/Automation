@@ -18,7 +18,7 @@ public class Practicesetup {
 	By searchfield = By.xpath("//input[@type='text']");
 	By Freeshipping = By.xpath("//span[text()='Eligible for Free Shipping']");
 	By computersandtablets = By.xpath("//span[text()='Computers & Tablets']");
-	By Iphone = By.xpath("//*[contains(text(),'Apple iPhone 11')]");
+	By Iphone14 = By.xpath("//*[contains(text(),'Apple iPhone 11')]");
 	By BuyNow = By.xpath("//input[@title='Add to Shopping Cart']");
 	By Proceed =By.xpath("(//input[@type='submit'])[22]");
 	public void setup() {
@@ -32,7 +32,7 @@ public class Practicesetup {
 		driver.findElement(searchfield).sendKeys(Keys.ENTER);
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(Iphone));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(Iphone14));
 		
 		driver.findElement(Iphone).click();
 		
